@@ -1,3 +1,5 @@
+import time
+
 import pytest
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -35,3 +37,13 @@ class BasePage():
 
     def are_present(self, find_by: str, locator: str):
         return self.__wait.until(EC.presence_of_all_elements_located((self.__get_selenium_by(find_by), locator)))
+
+    def clear_fill_submit_address_text_field(self):
+        time.sleep(1)
+        self.is_present('css', '.react-select__indicators button').click()
+        time.sleep(1)
+        self.is_present('css', '.react-select__input input').send_keys('Москва, улица Серафимовича, 2')
+        time.sleep(1)
+        self.is_present('css', '.react-select__option').click()
+        time.sleep(1)
+        self.is_present('css', '.delivery-status__submit').click()
