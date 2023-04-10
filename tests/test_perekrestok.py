@@ -21,3 +21,8 @@ class TestPerekrestok:
         count_price = product_page.get_added_items_count_price(count)
         # cart_page = CartPage(self.driver)
         time.sleep(2)
+
+    def test_footer_links_not_empty(self):
+        main_page = MainPage(self.driver)
+        # Need a better name
+        main_page.find_and_get_footer_links()
