@@ -22,7 +22,7 @@ class TestPerekrestok:
         # cart_page = CartPage(self.driver)
         time.sleep(2)
 
-    def test_footer_links_not_empty(self):
+    def test_footer_links_not_400(self):
         main_page = MainPage(self.driver)
         # Need a better name
-        main_page.find_and_get_footer_links()
+        main_page.get_check_footer_links()

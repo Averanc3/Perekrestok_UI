@@ -15,7 +15,7 @@ class MainPage(BasePage):
         self.is_present('css', self.__search_field_l).send_keys(textt)
         self.is_present('css', self.__search_icon_l).click()
 
-    def find_and_get_footer_links(self):
+    def get_check_footer_links(self):
         footer_links = self.are_present('css', self.__footer_links_l)
         broken_links=[]
         for link in footer_links:
