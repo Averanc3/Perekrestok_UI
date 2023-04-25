@@ -26,6 +26,6 @@ class MainPage(BasePage):
                 broken_links.append(url)
 
         print(broken_links)
-        assert len(broken_links) == 0, 'Some broken link(s) there'
+        assert len(broken_links) == 0, f'Some broken link(s) there - {len(broken_links)}'
 
 
